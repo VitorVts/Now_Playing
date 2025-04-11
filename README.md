@@ -27,8 +27,4 @@ Este projeto é um widget desenvolvido em PHP para exibir a música atual que es
 
 ---
 
-
-
----
-
 📬 **Licença:** Projeto livre para fins educacionais e de portfólio.
