@@ -35,12 +35,10 @@ curl_close($ch);
 $response = json_decode($resposta, true);
 
 if (isset($response['access_token'])) {
+    $response['created_at'] = time();
+    file_put_contents(__DIR__ . '/../tokens/token.json', json_encode($response, JSON_PRETTY_PRINT));
     echo "Access Token: " . $response['access_token'];
 } else {
     echo "Erro ao obter token: ";
     var_dump($response);
 }
-
-$response['created_at'] = time();
-file_put_contents(__DIR__ . '/../tokens/token.json', json_encode($response, JSON_PRETTY_PRINT));
-
